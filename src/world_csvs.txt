@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/devinit/digital-platform/master/country-year/poorest-20-percent.csv

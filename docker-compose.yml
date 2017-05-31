@@ -12,3 +12,9 @@ services:
         image: tippecanoe
         volumes:
             - ./data:/data
+            - ./src:/src
+    node:
+        image: node:alpine
+        volumes:
+            - ./data:/data
+            - ./src:/src
