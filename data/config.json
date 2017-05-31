@@ -1,0 +1,23 @@
+{
+  "options": {
+    "paths": {
+      "root": "/usr/src/app/node_modules/tileserver-gl-styles",
+      "fonts": "fonts",
+      "styles": "styles",
+      "mbtiles": "/data"
+    }
+  },
+    "styles": {
+        "subnationalgeojson": {
+            "style": "/data/subnational.json"
+        },
+        "clustersgeojson": {
+            "style": "/data/clusters.json"
+        }
+    },
+  "data": {
+    "output": {
+      "mbtiles": "output.mbtiles"
+    }
+  }
+}

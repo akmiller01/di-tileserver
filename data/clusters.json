@@ -1,0 +1,355 @@
+{
+    "version": 8,
+    "name": "Red P20 cluster dots",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template",
+        "mapbox:groups": {
+            "e4dca3cd3259101987b3b2557813c5ca": {
+                "name": "Clusters"
+            }
+        }
+    },
+    "center": [
+        29.70600319327528,
+        10.654157527246056
+    ],
+    "zoom": 1.6975729488801188,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {
+            "url": "mbtiles://output.mbtiles",
+            "type": "vector"
+        }
+    },
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "background-color": "rgba(233,231,232,1)"
+            }
+        },
+        {
+            "id": "BG Nations",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "worldgeojson",
+            "minzoom": 1,
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgba(186,186,186,1)",
+                "fill-outline-color": "rgba(238,238,238,1)"
+            }
+        },
+        {
+            "id": "clusters 0.0 - 0.2",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "e4dca3cd3259101987b3b2557813c5ca"
+            },
+            "source": "composite",
+            "source-layer": "clustersgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "p20",
+                        0.2
+                    ],
+                    [
+                        ">=",
+                        "p20",
+                        0
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "rgba(247,206,213,1)",
+                "circle-radius": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            1,
+                            0.75
+                        ],
+                        [
+                            10,
+                            5
+                        ],
+                        [
+                            22,
+                            5
+                        ]
+                    ]
+                },
+                "circle-blur": 0
+            }
+        },
+        {
+            "id": "clusters 0.2 - 0.4",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "e4dca3cd3259101987b3b2557813c5ca"
+            },
+            "source": "composite",
+            "source-layer": "clustersgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "p20",
+                        0.4
+                    ],
+                    [
+                        ">",
+                        "p20",
+                        0.2
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "rgba(235,167,180,1)",
+                "circle-radius": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            1,
+                            0.75
+                        ],
+                        [
+                            10,
+                            5
+                        ],
+                        [
+                            22,
+                            5
+                        ]
+                    ]
+                },
+                "circle-blur": 0
+            }
+        },
+        {
+            "id": "clusters 0.4 - 0.6",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "e4dca3cd3259101987b3b2557813c5ca"
+            },
+            "source": "composite",
+            "source-layer": "clustersgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "p20",
+                        0.6
+                    ],
+                    [
+                        ">",
+                        "p20",
+                        0.4
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "rgba(223,128,147,1)",
+                "circle-radius": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            1,
+                            0.75
+                        ],
+                        [
+                            10,
+                            5
+                        ],
+                        [
+                            22,
+                            5
+                        ]
+                    ]
+                },
+                "circle-blur": 0
+            }
+        },
+        {
+            "id": "clusters 0.6 - 0.8",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "e4dca3cd3259101987b3b2557813c5ca"
+            },
+            "source": "composite",
+            "source-layer": "clustersgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "p20",
+                        0.8
+                    ],
+                    [
+                        ">",
+                        "p20",
+                        0.6
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "rgba(186,12,47,1)",
+                "circle-radius": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            1,
+                            0.75
+                        ],
+                        [
+                            10,
+                            5
+                        ],
+                        [
+                            22,
+                            5
+                        ]
+                    ]
+                },
+                "circle-blur": 0
+            }
+        },
+        {
+            "id": "clusters 0.8 - 1.0",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "e4dca3cd3259101987b3b2557813c5ca"
+            },
+            "source": "composite",
+            "source-layer": "clustersgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "p20",
+                        1
+                    ],
+                    [
+                        ">",
+                        "p20",
+                        0.8
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "rgba(141,9,35,1)",
+                "circle-radius": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            1,
+                            0.75
+                        ],
+                        [
+                            10,
+                            5
+                        ],
+                        [
+                            22,
+                            5
+                        ]
+                    ]
+                },
+                "circle-blur": 0
+            }
+        },
+        {
+            "id": "BG Borders",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "worldgeojson",
+            "minzoom": 1,
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "layout": {},
+            "paint": {
+                "line-color": "rgba(238,238,238,1)",
+                "line-width": 0.3
+            }
+        }
+    ],
+    "created": "2017-02-07T14:45:46.072Z",
+    "id": "ciyvn2d1j000m2rmujhaca9ro",
+    "modified": "2017-05-03T13:20:12.946Z",
+    "owner": "akmiller01",
+    "visibility": "private",
+    "draft": false
+}

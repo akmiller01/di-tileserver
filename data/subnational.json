@@ -1,0 +1,283 @@
+{
+    "version": 8,
+    "name": "Red P20 subnational",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template",
+        "mapbox:groups": {
+            "61e01a372acab7b68a046a8487924d00": {
+                "name": "Subnational"
+            }
+        }
+    },
+    "center": [
+        39.1586415450069,
+        -5.955054664872009
+    ],
+    "zoom": 2.232657923524407,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {
+            "url": "mbtiles://output.mbtiles",
+            "type": "vector"
+        }
+    },
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "background-color": "rgba(233,231,232,1)"
+            }
+        },
+        {
+            "id": "BG Nations",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "worldgeojson",
+            "minzoom": 1,
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgba(186,186,186,1)",
+                "fill-outline-color": "rgba(238,238,238,1)"
+            }
+        },
+        {
+            "id": "subnational 0.0 - 0.2",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "61e01a372acab7b68a046a8487924d00"
+            },
+            "source": "composite",
+            "source-layer": "subnationalgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "P20",
+                        0.2
+                    ],
+                    [
+                        ">=",
+                        "P20",
+                        0
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgba(247,206,213,1)",
+                "fill-outline-color": "rgba(238,238,238,1)"
+            }
+        },
+        {
+            "id": "subnational 0.2 - 0.4",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "61e01a372acab7b68a046a8487924d00"
+            },
+            "source": "composite",
+            "source-layer": "subnationalgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "P20",
+                        0.4
+                    ],
+                    [
+                        ">",
+                        "P20",
+                        0.2
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgba(235,167,180,1)",
+                "fill-outline-color": "rgba(238,238,238,1)"
+            }
+        },
+        {
+            "id": "subnational 0.4 - 0.6",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "61e01a372acab7b68a046a8487924d00"
+            },
+            "source": "composite",
+            "source-layer": "subnationalgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "P20",
+                        0.6
+                    ],
+                    [
+                        ">",
+                        "P20",
+                        0.4
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgba(223,128,147,1)",
+                "fill-outline-color": "rgba(238,238,238,1)"
+            }
+        },
+        {
+            "id": "subnational 0.6 - 0.8",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "61e01a372acab7b68a046a8487924d00"
+            },
+            "source": "composite",
+            "source-layer": "subnationalgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "P20",
+                        0.8
+                    ],
+                    [
+                        ">",
+                        "P20",
+                        0.6
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgba(186,12,47,1)",
+                "fill-outline-color": "rgba(238,238,238,1)"
+            }
+        },
+        {
+            "id": "subnational 0.8 - 1.0",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "61e01a372acab7b68a046a8487924d00"
+            },
+            "source": "composite",
+            "source-layer": "subnationalgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "all",
+                    [
+                        "<=",
+                        "P20",
+                        1
+                    ],
+                    [
+                        ">",
+                        "P20",
+                        0.8
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgba(141,9,35,1)",
+                "fill-outline-color": "rgba(238,238,238,1)"
+            }
+        },
+        {
+            "id": "BG Borders",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "worldgeojson",
+            "minzoom": 1,
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "layout": {},
+            "paint": {
+                "line-opacity": 1,
+                "line-color": "rgba(238,238,238,1)",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            1,
+                            2
+                        ],
+                        [
+                            10,
+                            6
+                        ]
+                    ]
+                }
+            }
+        }
+    ],
+    "created": "2017-02-07T18:59:42.189Z",
+    "id": "ciyvw4xb000592rplysl908n8",
+    "modified": "2017-05-03T13:22:08.284Z",
+    "owner": "akmiller01",
+    "visibility": "private",
+    "draft": false
+}

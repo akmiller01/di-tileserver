@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    tileserver:
+        image: klokantech/tileserver-gl
+        volumes:
+            - ./data:/data
+        ports:
+            - "8080:80"
+        command: /data/output.mbtiles
+    tippecanoe:
+        image: tippecanoe
+        volumes:
+            - ./data:/data
