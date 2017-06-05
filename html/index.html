@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamically styled vector tiles</title>
+  <link rel="stylesheet" type="text/css" href="/mapbox-gl.css" />
+  <script src="/mapbox-gl.js"></script>
+  <link rel="stylesheet" type="text/css" href="/mapbox.css" />
+  <script src="/mapbox.js"></script>
+  <script src="/leaflet-hash.js"></script>
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+  <h1 style="display:none;">Red P20 national</h1>
+  <div id='map'></div>
+  <button style="z-index:9999;position:absolute;" onclick="randomcolour();">Random recolour</button>
+  <script>
+	var maxValue = 100;
+	var data = [
+		{"id":"US","value":50},
+		{"id":"CN","value":80},
+		{"id":"UG","value":100},
+	];
+    var q = (location.search || '').substr(1).split('&');
+      mapboxgl.setRTLTextPlugin('/mapbox-gl-rtl-text.js');
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'http://localhost:8080/styles/worldgeojson.json',
+        hash: true
+      });
+      map.addControl(new mapboxgl.NavigationControl());
+	  
+	var vtMatchProp = "ISO2";
+	var dataMatchProp = "id";
+	var dataStyleProp = "value";
+	
+	function recolour(data){
+		// First value is the default, used where the is no data
+		var stops = [["0", "rgba(186,186,186,1)"]];
+		
+		// Calculate color for each shape
+		data.forEach(function(row) {
+			var green = ((row[dataStyleProp] / maxValue) * 255);
+			var color = "rgba(" + 0 + ", " + green + ", " + 0 + ", 1)";
+			stops.push([row[dataMatchProp], color]);
+		});
+				
+		map.setPaintProperty('national','fill-color',
+			{
+				"property": vtMatchProp,
+				"type": "categorical",
+				"stops": stops
+			}
+		);
+	}
+	
+	function randomcolour(){
+		var features = map.queryRenderedFeatures({layers:['national']});
+		// First value is the default, used where the is no data
+		var stops = [["0", "rgba(186,186,186,1)"]];
+		
+		// Calculate color for each shape, domain must be unique
+		var uniqueFeatures = {};
+		features.forEach(function(row) {
+			var red = Math.random()*255;
+			var green = Math.random()*255;
+			var blue = Math.random()*255;
+			var color = "rgba(" + red + ", " + green + ", " + blue + ", 1)";
+			if(uniqueFeatures[row.properties[vtMatchProp]]===undefined){
+				stops.push([row.properties[vtMatchProp], color]);
+				uniqueFeatures[row.properties[vtMatchProp]] = true;
+			}else{
+				uniqueFeatures[row.properties[vtMatchProp]] = true;
+			}
+		});
+				
+		map.setPaintProperty('national','fill-color',
+			{
+				"property": vtMatchProp,
+				"type": "categorical",
+				"stops": stops
+			}
+		);
+	}
+	
+	map.on('load', function() {
+		recolour(data);
+	});
+  
+  </script>
+</body>
+</html>

@@ -8,6 +8,9 @@
     }
   },
     "styles": {
+      "worldgeojson": {
+            "style": "/data/world.json"
+        },
         "subnationalgeojson": {
             "style": "/data/subnational.json"
         },

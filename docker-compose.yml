@@ -14,7 +14,8 @@ services:
             - ./data:/data
             - ./src:/src
     node:
-        image: node:alpine
+        image: webratio/nodejs-http-server:0.9.0
         volumes:
-            - ./data:/data
-            - ./src:/src
+            - ./html:/opt/www
+        ports:
+            - "8888:8080"
