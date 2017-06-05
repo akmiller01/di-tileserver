@@ -19,7 +19,7 @@
     "pitch": 0,
     "sources": {
         "composite": {
-            "url": "mbtiles://output.mbtiles",
+            "url": "mbtiles://world.mbtiles",
             "type": "vector"
         }
     },

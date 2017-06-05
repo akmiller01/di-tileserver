@@ -21,6 +21,9 @@
   "data": {
     "output": {
       "mbtiles": "output.mbtiles"
+    },
+    "world": {
+      "mbtiles": "world.mbtiles"
     }
   }
 }
