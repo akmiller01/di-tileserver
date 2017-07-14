@@ -59,7 +59,7 @@
 		function recolour(data) {
 			// First value is the default, used where the is no data
 			var stops = [
-				["0", "rgba(186,186,186,1)"]
+				//["0","rgba(186,186,186,1)"]
 			];
 
 			// Calculate color for each shape
@@ -71,7 +71,8 @@
 			map.setPaintProperty('national', 'fill-color', {
 				"property": vtMatchProp,
 				"type": "categorical",
-				"stops": stops
+				"stops": stops,
+				"default":"rgba(186,186,186,1)"
 			});
 		}
 
