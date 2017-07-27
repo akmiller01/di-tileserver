@@ -19,3 +19,12 @@ services:
             - ./html:/opt/www
         ports:
             - "8888:8080"
+    nginx:
+        image: nginx:latest
+        ports:
+            - "443:443"
+        volumes:
+            - ./config/nginx:/etc/nginx/conf.d
+            - ./ssl:/etc/ssl
+        depends_on:
+            - tileserver
