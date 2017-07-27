@@ -16,6 +16,9 @@
         },
         "clustersgeojson": {
             "style": "/data/clusters.json"
+        },
+        "ugandageojson": {
+            "style":"/data/uganda.json"
         }
     },
   "data": {
@@ -24,6 +27,9 @@
     },
     "world": {
       "mbtiles": "world.mbtiles"
+    },
+    "uganda": {
+      "mbtiles": "uganda.mbtiles"
     }
   }
 }
