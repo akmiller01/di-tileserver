@@ -31,7 +31,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "background-color": "rgba(233,231,232,1)"
+                "background-color": "rgba(211,224,244,1))"
             }
         },
         {
@@ -47,7 +47,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "fill-color": "rgba(186,186,186,1)",
+                "fill-color": "rgba(208,204,207,1)",
                 "fill-outline-color": "rgba(238,238,238,1)"
             }
         }

@@ -31,7 +31,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "background-color": "rgba(233,231,232,1)"
+                "background-color": "rgba(211,224,244,1)"
             }
         },
         {
@@ -49,12 +49,12 @@
                 "visibility": "visible"
             },
             "paint": {
-                "fill-color": "rgba(186,186,186,1)",
+                "fill-color": "rgba(208,204,207,1)",
                 "fill-outline-color": "rgba(238,238,238,1)"
             }
         },
         {
-            "id": "clusters 0.0 - 0.2",
+            "id": "clusters 0.0 - 0.1",
             "type": "circle",
             "metadata": {
                 "mapbox:group": "e4dca3cd3259101987b3b2557813c5ca"
@@ -72,9 +72,9 @@
                 [
                     "all",
                     [
-                        "<=",
+                        "<",
                         "p20",
-                        0.2
+                        0.1
                     ],
                     [
                         ">=",
@@ -87,7 +87,62 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(247,206,213,1)",
+                "circle-color": "rgba(251,215,203,1)",
+                "circle-radius": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            1,
+                            0.75
+                        ],
+                        [
+                            10,
+                            5
+                        ],
+                        [
+                            22,
+                            5
+                        ]
+                    ]
+                },
+                "circle-blur": 0
+            }
+        },
+        {
+            "id": "clusters 0.1 - 0.2",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "e4dca3cd3259101987b3b2557813c5ca"
+            },
+            "source": "composite",
+            "source-layer": "clustersgeojson",
+            "minzoom": 1,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "all",
+                    [
+                        "<",
+                        "p20",
+                        0.2
+                    ],
+                    [
+                        ">=",
+                        "p20",
+                        0.1
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "rgba(247,186,174,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
@@ -127,12 +182,12 @@
                 [
                     "all",
                     [
-                        "<=",
+                        "<",
                         "p20",
                         0.4
                     ],
                     [
-                        ">",
+                        ">=",
                         "p20",
                         0.2
                     ]
@@ -142,7 +197,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(235,167,180,1)",
+                "circle-color": "rgba(243,156,145,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
@@ -182,12 +237,12 @@
                 [
                     "all",
                     [
-                        "<=",
+                        "<",
                         "p20",
                         0.6
                     ],
                     [
-                        ">",
+                        ">=",
                         "p20",
                         0.4
                     ]
@@ -197,7 +252,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(223,128,147,1)",
+                "circle-color": "rgba(179,43,35,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
@@ -237,12 +292,12 @@
                 [
                     "all",
                     [
-                        "<=",
+                        "<",
                         "p20",
                         0.8
                     ],
                     [
-                        ">",
+                        ">=",
                         "p20",
                         0.6
                     ]
@@ -252,7 +307,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(186,12,47,1)",
+                "circle-color": "rgba(161,35,27,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
@@ -297,7 +352,7 @@
                         1
                     ],
                     [
-                        ">",
+                        ">=",
                         "p20",
                         0.8
                     ]
@@ -307,7 +362,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(141,9,35,1)",
+                "circle-color": "rgba(143,27,19,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
