@@ -142,7 +142,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(233,184,172,1)",
+                "circle-color": "rgba(247,186,174,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
@@ -197,7 +197,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(215,152,142,1)",
+                "circle-color": "rgba(243,156,145,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
@@ -252,7 +252,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(197,121,111,1)",
+                "circle-color": "rgba(240,127,116,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
@@ -307,7 +307,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(179,90,80,1)",
+                "circle-color": "rgba(236,97,87,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
@@ -362,7 +362,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "rgba(161,58,50,1)",
+                "circle-color": "rgba(232,68,58,1)",
                 "circle-radius": {
                     "base": 0.9,
                     "stops": [
