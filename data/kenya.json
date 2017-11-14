@@ -96,9 +96,41 @@
                 ]
             ],
             "paint": {
-                "fill-color": "rgba(0,0,0,1)",
+                "fill-color": "rgba(208,204,207,1)",
                 "fill-outline-color": "rgba(238,238,238,1)"
             }
+        },
+        {
+            "id": "triangleOutline",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "cbefd3306f19f1436af7c731cde58ddf"
+            },
+            "source": "composite",
+            "source-layer": "kenyageojson",
+            "minzoom": 1,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "ID",
+                        "d0"
+                    ]
+                ]
+            ],
+            "line-color": "rgba(238,238,238,1)",
+            "line-width":2,
+            "line-dasharray":[2,2]
         }
     ],
     "created": "2017-02-07T20:49:33.569Z",
