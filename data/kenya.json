@@ -128,9 +128,12 @@
                     ]
                 ]
             ],
-            "line-color": "rgba(238,238,238,1)",
-            "line-width":2,
-            "line-dasharray":[2,2]
+            "paint":{
+                "line-color": "rgba(0,0,0,1)",
+                "line-width":2,
+                "line-dasharray":[2,2]
+            }
+            
         }
     ],
     "created": "2017-02-07T20:49:33.569Z",
