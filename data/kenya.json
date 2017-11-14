@@ -46,8 +46,57 @@
             "layout": {
                 "visibility": "visible"
             },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "all",
+                    [
+                        "!=",
+                        "ID",
+                        "d0"
+                    ]
+                ]
+            ],
             "paint": {
                 "fill-color": "rgba(208,204,207,1)",
+                "fill-outline-color": "rgba(238,238,238,1)"
+            }
+        },
+        {
+            "id": "triangle",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "cbefd3306f19f1436af7c731cde58ddf"
+            },
+            "source": "composite",
+            "source-layer": "kenyageojson",
+            "minzoom": 1,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "ID",
+                        "d0"
+                    ]
+                ]
+            ],
+            "paint": {
+                "fill-color": "rgba(0,0,0,1)",
                 "fill-outline-color": "rgba(238,238,238,1)"
             }
         }
